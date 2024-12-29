@@ -1,9 +1,14 @@
 document.getElementById('displayButton').addEventListener('click', function () {
     const input = document.getElementById('innerText').value;
-    const output = document.getElementById('outputText');
-    if (input.trim() === '') {
-        output.textContent = '入力が空です。';
-    } else {
-        output.textContent = `入力されたテキスト: ${input}`;
+    const displayArea = document.getElementById('displayArea');
+    if (input.trim() !== '') {
+        const newElement = document.createElement('p');
+        newElement.textContent = input;
+        newElement.classList.add('draggable');
+        newElement.style.position = 'absolute';
+        newElement.style.left = '10px';
+        newElement.style.top = '10px';
+        displayArea.appendChild(newElement);
+        makeDraggable(newElement);
     }
 });
