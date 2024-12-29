@@ -31,19 +31,16 @@
 <body>
     <h1>テキスト入力ボックス</h1>
     <input type="text" id="textInput" placeholder="ここにテキストを入力してください">
-    <button id="displayButton">表示する</button>
+    <button onclick="displayInput()">表示する</button>
     <div id="output"></div>
 
     <script>
-        document.getElementById('displayButton').addEventListener('click', function() {
+        function displayInput() {
             const input = document.getElementById('textInput').value;
             const output = document.getElementById('output');
-            if (input.trim() === '') {
-                output.textContent = '入力が空です。';
-            } else {
-                output.textContent = `入力されたテキスト: ${input}`;
-            }
-        });
+            output.textContent = `入力されたテキスト: ${input}`;
+        }
     </script>
 </body>
 </html>
+
