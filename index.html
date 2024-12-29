@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>入れ子ボックス</title>
-    <!-- CSSファイルの読み込み -->
+    <title>外側の箱にテキスト表示</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -12,10 +11,9 @@
         <div class="inner-box">
             <input type="text" id="innerText" placeholder="ここにテキストを入力してください">
             <button id="displayButton">表示する</button>
-            <div class="output-text" id="outputText"></div>
         </div>
+        <div id="displayArea" class="display-area"></div>
     </div>
-    <!-- JavaScriptファイルの読み込み -->
     <script src="assets/script.js"></script>
 </body>
 </html>
